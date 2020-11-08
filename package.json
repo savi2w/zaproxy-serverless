@@ -1,7 +1,7 @@
 {
   "name": "zaproxy-serverless",
   "version": "1.0.0",
-  "main": "dist/zaproxy-serverless.js",
+  "main": "build/zaproxy-serverless.js",
   "scripts": {
     "build": "tsc"
   },
