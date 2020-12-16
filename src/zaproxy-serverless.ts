@@ -4,7 +4,7 @@ import * as proxy from "./proxy";
 import * as scanner from "./scanner";
 
 /**
- * In order for everything to work fine you should
+ * In order to everything work you should
  * also define the ZAP-API-Key in the ZapClient
  */
 
