@@ -4,9 +4,6 @@ import * as proxy from "./proxy";
 import * as scanner from "./scanner";
 
 /**
- * Its interesting that the target
- * comes directly to the Lambda event :)
- *
  * In order for everything to work fine you should
  * also define the ZAP-API-Key in the ZapClient
  */
