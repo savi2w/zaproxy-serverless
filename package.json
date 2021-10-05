@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc"
   },
-  "author": "Weslen Guerreiro <weslenng@outlook.com>",
+  "author": "Weslen Guerreiro <omppye@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "zaproxy": "^1.0.1"
