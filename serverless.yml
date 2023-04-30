@@ -1,0 +1,39 @@
+service: zaproxy-serverless
+
+provider:
+  name: aws
+  memorySize: 1536
+  region: sa-east-1
+  runtime: nodejs12.x
+  stage: production
+  timeout: 900
+
+package:
+  individually: true
+  exclude:
+    - "**"
+
+plugins:
+  - serverless-plugin-include-dependencies
+
+functions:
+  zaproxy-serverless:
+    handler: build/zaproxy-serverless.handler
+    layers:
+      - { Ref: JavaLambdaLayer }
+      - { Ref: ProxyLambdaLayer }
+
+    package:
+      include:
+        - build/**
+
+layers:
+  java:
+    path: packages/java
+    package:
+      artifact: packages/java.zip
+
+  proxy:
+    path: packages/zaproxy
+    package:
+      artifact: packages/zaproxy.zip
